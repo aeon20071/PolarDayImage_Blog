@@ -1,0 +1,194 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.eassy-text {
+	width: 1200px;
+	box-shadow: 0px 0px 10px #dedede;
+	border-radius: 8px;
+	margin: 20px;
+	background-color: white;
+}
+
+.com {
+	width: 1200px;
+	box-shadow: 0px 0px 10px #dedede;
+	border-radius: 8px;
+	margin: 45px 20px;
+	background-color: white;
+	text-align: center;
+	padding: 20px 0px;
+}
+
+.com h1{
+	border-bottom: 1px solid #f0f0f0;
+	padding: 20px 0;
+	font-size: 26px;
+	position: relative;
+	top: -10px;
+}
+.com input,.com textarea{
+	background-color: #e5e5e5;
+	border: none;
+	outline:none;
+	transition: 0.4s;
+}
+.com input{
+	font-size: 14px;
+	line-height: 50px;
+	margin: 20px 20px;
+	margin-bottom: 30px;
+	width: 500px;
+}
+.com textarea{
+	width: 1045px;
+	height: 300px;
+	font-size: 14px;
+	line-height: 50px;
+}
+.com input:hover{
+	border: none;
+	border-bottom: #459ced 2px solid;
+	background-color: #fafafa;
+}
+.com input:focus{
+	border: none;
+	border-bottom: #459ced 2px solid;
+	background-color: #fafafa;
+}
+
+.com textarea:hover{
+	border: none;
+	border-bottom: #459ced 2px solid;
+	background-color: #fafafa;
+}
+.com textarea:focus{
+	border: none;
+	border-bottom: #459ced 2px solid;
+	background-color: #fafafa;
+}
+
+.com .but{
+	text-align: right;
+}
+
+.com .but button{
+	font-size: 18px;
+	height: 45px;
+	line-height: 38px;
+	margin-top: 25px;
+	margin-right: 75px;
+	width: 130px;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	background-image: linear-gradient(125deg,#56CCF2,#2F80ED);
+	transition: 0.4s;
+}
+
+.com .but button:hover{
+	transform: scale(1.2);
+	background-image: linear-gradient(125deg,#2F80ED,#56CCF2);
+}
+
+.eassy-text>img {
+	border-radius: 8px 8px 0 0;
+}
+
+.eassy-text h1 {
+	font-family: chineseMao;
+	margin: 30px 90px;
+	margin-top: 60px;
+	padding-left: 25px;
+	border-left: #4f4f4f 15px solid;
+	font-size: 38px;
+	color: #109ced;
+}
+
+.eassy-author {
+	width: 800px;
+	margin: 20px 90px;
+	padding: 10px;
+	border-radius: 8px;
+	transition: 0.4s;
+}
+
+.eassy-author:hover {
+	box-shadow: 0px 0px 5px #007AFF;
+}
+
+.eassy-author p {
+	display: inline-block;
+	margin: 10px;
+	color: #999a99;
+}
+
+.eassy-author p button {
+	border-width: 2px;
+	border-radius: 20px;
+	width: 45px;
+	height: 25px;
+	color: #ec7259;
+	font-weight: bold;
+	margin: 5px 0;
+	margin-left: 13px;
+	border-color: #ec7259;
+	background: transparent;
+	position: relative;
+	top: -2px;
+	transition: 0.4s;
+}
+
+.eassy-author p button:hover {
+	background-color: #fef8f7;
+}
+
+.eassy-author p span {
+	font-weight: bold;
+	font-size: 20px;
+	padding: 20px 5px;
+	line-height: 50px;
+	color: #4f4f4f;
+}
+
+.con {
+	margin: 20px 110px;
+	padding-bottom: 100px;
+}
+
+.con h2 {
+	font-family: chineseMao;
+	font-size: 2em;
+	margin-top: 40px;
+}
+
+.con p {
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 15px;
+	text-indent: 1.7em;
+	color: #5e5e5e;
+}
+
+.con .poetry {
+	text-indent: 0;
+	font-size: 1em;
+	border-left: #e6e6e6 10px solid;
+	padding: 20px 20px;
+	margin: 20px 0;
+	background-color: #fafafa;
+	width: 500px;
+	line-height: 35px;
+}
+
+.con p i {
+	color: #109ced;
+	position: relative;
+	left: -31px;
+}
+
+@font-face {
+	font-family: chineseMao;
+	src: url(../font/chineseMao.ttf) format("truetype");
+}

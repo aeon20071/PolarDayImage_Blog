@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>极昼鏡像·Podcast</title>
+
+		<link rel="icon" type="image/x-ico" href="../ico/Logo.ico" />
+
+		<!-- font-awesome 图标包 -->
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+		<!-- 导航栏 -->
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootsnav.css">
+		<link href="../css/topbar.css" rel="stylesheet" />
+		<!-- 通用 -->
+		<link href="../css/normal.css" rel="stylesheet" />
+		<!-- 卡片 -->
+		<link rel="stylesheet" type="text/css" href="../css/card.css">
+
+		<link rel="stylesheet" type="text/css" href="../css/eassy.css">
+
+		<link rel="stylesheet" href="../css/jsmodern-4.1.4.min.css">
+
+		<style>
+			* {margin: 0;padding: 0;}
+
+			body {
+				font-family: pingFang;
+				width: 100%;
+				height: 5040px;
+				background-color: #f1f1f1;
+				overflow-x: hidden;
+				position: relative;
+			}
+			.music-card{
+				transform: scale(0.75);
+				position: fixed;
+				top:89%;
+				right: 17.5%;
+				z-index: 9;
+			}
+			
+			.content{
+				position: relative;
+				top: 2420px;
+			}
+			.eassy-text .eassy-author img{
+				position: relative;
+				top:-22px;
+			}
+			.com h1{
+				position: relative;
+				top:-35px;
+			}
+			
+			
+			/* 离线字体 */
+			@font-face {
+				font-family: chineseMao;
+				src: url(../font/chineseMao.ttf) format("truetype");
+			}
+			
+			@font-face {
+				font-family: pingFang;
+				src: url(../font/pingFang) format("truetype");
+			}
+			
+			@font-face {
+				font-family: xingshu;
+				src: url(../font/xingshu.ttf) format("truetype");
+			}
+			#video {
+				width: 970px;
+				height: 400px;
+				margin: 0 auto;
+			}
+			#video video {
+				width: 100%;
+				height: 100%;
+				object-fit: fill;
+			}
+			.VideoBtn {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				display: block;
+				width: 70px;
+				height: 70px;
+				margin-left: -35px;
+				margin-top: -35px;
+				cursor: pointer;
+				z-index: 10;
+			}
+		</style>
+		<script src="https://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+
+		<!--mp4视频插件-->
+		<script src="../js/jsmodern-4.1.4.min.js"></script>
+
+	</head>
+
+
+	<body>
+		<!-- 背景div -->
+		<div id="mydiv" style="height:5040px;z-index: -99;">
+			<!-- 顶栏 -->
+			<div class="topbarout">
+				<div class="topbar">
+					<h1>
+						<i class="fa fa-circle-o-notch fa-spin fa-fw" style="position: relative;top:-10px;left:117.6px;font-size: 0.6em;color: #0175e8;padding: 0px;font-weight: bolder;"></i>
+						极昼 鏡像
+					</h1>
+
+					<div class="menu">
+						<div class="jq22-container">
+							<div class="demo" style="padding: 2em 0;">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12">
+											<nav class="navbar navbar-default navbar-mobile bootsnav">
+												<div class="navbar-header">
+													<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+														<i class="fa fa-bars"></i>
+													</button>
+												</div>
+												<div class="collapse navbar-collapse" id="navbar-menu">
+													<ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+														<li><a href="home.html">Home</a></li>
+														<li class="dropdown">
+															<a href="essay.html" class="dropdown-toggle" data-toggle="dropdown">Artist</a>
+															<ul class="dropdown-menu">
+																<li><a href="essay.html">文章 Essay</a></li>
+																<li><a href="photo.html">摄影 Photo</a></li>
+																<li><a href="draw.html">绘画 Draw</a></li>
+																<li><a href="podcast.html">播客 Podcast</a></li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a href="developer.html" class="dropdown-toggle" data-toggle="dropdown">Developer</a>
+															<ul class="dropdown-menu">
+																<li><a href="404.html">算法与数据结构</a></li>
+																<li><a href="404.html">搭建网站</a></li>
+																<li><a href="404.html">数据库</a></li>
+																<li><a href="404.html">信息系统项目开发</a></li>
+																<li><a href="404.html">机器学习</a></li>
+															</ul>
+														</li>
+														<li><a href="gamer.html">Gamer</a></li>
+														<li class="dropdown">
+															<a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+															<ul class="dropdown-menu">
+																<li><a href="../index.html">欢迎页 Welcome</a></li>
+																<li><a href="404.html">错误页 Error 404</a></li>
+															</ul>
+														</li>
+														<li><a href="about.html">About Me</a></li>
+													</ul>
+												</div>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+						<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+						<script type="text/javascript" src="../js/bootsnav.js"></script>
+					</div>
+				</div>
+				<!-- 头像 -->
+				<div class="headimg"><img src="../images/Headimg.png" width="57px" height="57px"></div>
+			</div>
+
+
+			<!-- 内容 -->
+			<div class="content">
+
+				<div class="eassy-text">
+					<img src="../images/Podecast/文章图/FF7.png" width="1200px" />
+					<h1 class="eassy-title">FINAL FANTASY VII：有生之年</h1>
+					<div class="eassy-author">
+						<img src="../images/Headimg.png" />
+						<p><span>周行文</span><button>关注</button><br>2020.11.3 &nbsp;&nbsp;字数 1,820 &nbsp;&nbsp;阅读 163,600</p>
+					</div>
+
+
+
+					<div id="video">
+						<video src="../videos/head.mp4" id="videoShow"></video>
+
+					</div>
+
+					<!--视频插件调用方法-->
+					<script>
+						$(function () {
+						//视频
+						jsModern.video("#video");
+						//播放视频
+						$(".VideoBtn").click(function () {
+							var video = document.getElementById("videoShow");
+							video.play();
+							$('.VideoBtn').hide();
+						})
+						//监听视频的播放状态
+						var video = document.getElementById("videoShow");
+						video.oncanplay = function () {
+							$(".VideoBtn").show();
+							//$("#video").attr("poster","");
+						}
+						//视频播放事件
+						video.onplay = function () {
+							$("#videoShow").attr("poster", "");
+							$(".VideoBtn").hide();
+						};
+						video.onplaying = function () {
+							$(".VideoBtn").hide();
+						};
+					
+						//视频暂停事件
+						video.onpause = function () {
+							$(".VideoBtn").show();
+						};
+						//点击视频周围暂停播放图片出现
+						video.onclick = function () {
+							if (video.paused) {
+								$(".VideoBtn").hide();
+								video.play();
+							} else {
+								$(".VideoBtn").show();
+								video.pause();
+							}
+						};
+					})
+					</script>
+
+
+
+
+
+
+					<div class="con">
+
+						<h2>01</h2>
+						<p class="poetry">
+							这世间的久别重逢，听得多，见的少。<br>
+							见了还能刻骨铭心的更少。<br>
+							如果有可能，我希望爱丽丝和扎克斯永远活下去，<br>
+							就像我们希望自己可以永远年轻一样。<br>
+						</p>
+						<p>
+							我在2003年第一次听到《最终幻想10-2》的那首《千言万语》，
+							虽然只是一个续作的主题曲，
+							却觉得这个标题真适合自己对《最终幻想》系列的感慨和记忆。
+						</p>
+						<p>
+							时光如梭，每一件事都像刚发生在昨天。初次见到天野喜孝插画时是《最终幻想2》。
+							那也是《浪漫沙迦》系列的起源，在非阶段性成长的RPG里融入了对锤炼角色的感情。
+							每一个魔法、每一次攻击、每一下按键，都是人物成长阶梯，
+							也是对角色的故事更关注也更不舍。
+						</p>
+						<p>
+							第一次在RPG里看到召唤兽的《最终幻想3》，水之巫女逝去后洪水退去，
+							真正的世界地图才刚刚开始出现，让人印象深刻。
+							无论走多少次都会让人战战兢兢的最终迷宫里，有无尽的战斗和黑暗，
+							在那绝望中也能出现光辉的印象，给这个系列定下了基调。
+						</p>
+						<p>
+							是啊是啊，光之战士的故事仿佛从远古的时代就这样走来。
+						</p>
+						<p>所以当我回过头去玩了初代的《最终幻想》，时空悖论和卡奥斯都让人难忘。朴素的古典RPG里很少有的角色性格，还是会让我想起最初救下公主后通过大桥的场面，那是系列第一次响起水晶序曲。美好纯粹简朴又震撼。</p>
+						<p>光与暗骑士成长蜕变的《最终幻想4》，塞西尔和我都永远记得，看见镜子里的心魔时自己的迷惘。暗骑士变成圣骑士的山顶，所有悲伤和快乐都会再次重逢。</p>
+						<p>风把勇气传播的《最终幻想5》，死亡也阻止不了年轻人们前进的脚步。风停止的那些时间里，挚爱即使消失，勇气也还会穿透最终的虚无。</p>
+						<p>人生第一次连续熬夜玩一个游戏的《最终幻想6》，音乐和角色都深深烙印在记忆里，家仇国恨最终化成十四个人的勇往直前，我会永远爱塞丽丝和蒂娜。</p>
+						<p>充满期待的《最终幻想8》里，听着王菲的英文歌感动又新奇，日式RPG的套路不管用了，爱情故事也挺好。斯考尔的连续剑一次次释放，欧米茄也不过是行色匆匆路上一块绊脚石。</p>
+						<p>还有那个《最终幻想9》，娓娓道来的成熟盗贼伸手摸向公主屁股，嬉笑之中陪着小刀妹妹穿过千山万水，带着艾柯妹妹离开孤独的故乡。到头来给重逢以泪水和欢笑，也让有遗憾的这个世界记得那些故事。</p>
+						<p>你问我为什么要跟着你走遍世界？那仅仅是因为你要去呀。</p>
+						<p>《最终幻想10》的时代里，有恋爱和远行，也有牺牲和更多的成长。自己的人生也走到这样的阶段，所以学着去认真喜欢一个人，并为了她去改变自己，而不被这个世界改变。看着尤娜终于抱住的只有空气，女孩的抽泣里留下遗憾，也留下淡淡希望。</p>
+						<p>后来找到合适自己但距家乡千万里的工作，开始品尝人生种种千回百转，《最终幻想12》的遗憾和优秀伴随着那时的夜晚灯火。见证历史和创造历史同样重要，可我们自己人生的历史除了自己还有谁愿意记得？</p>
+						<p>后来的《最终幻想13》，做梦也想不到会是个三部曲。随着三部曲一部部推进，等到完结时发现自己的生活已经翻天覆地。最终那个结局有些神奇又恍惚，却不愿意再重新审视一遍。</p>
+						<p>再后来就是2015年那次著名的E3了，《最终幻想15》和《最终幻想7 重制版》同时宣布，画饼大到天际又让你不得不吃下去的那一年。</p>
+						<p>那时候正在创业，跟同一年代玩过《最终幻想7》的朋友们一起看了发布会直播。叫的没有那几个老外厉害，也还是忍不住为自己的青春鼓掌，然后回忆第一次看到《最终幻想7》的印象，它夹杂在关于整个系列的记忆里，一直熠熠生辉，从来没什么变化。</p>
+						<p>那时候距离1997年已经过去了18年，谁也没想到会是在这样一种情况下的重逢。意外又惊喜还带着隐隐担忧，但大家都可以畅快回忆一番当年了。</p>
+
+						
+						<h2>03</h2>
+						<p>游戏通关了，生活得继续。这样的描述并不是因为什么无奈，而是两条线交叉后的必然回答。</p>
+						<p>世界还在为了卫生问题苦恼，每个人有了更多的思考时间。我在书房里，在电视前，在沙发上，翻检着自己曾经玩过的游戏，同时回味《最终幻想7 重制版》带给我的那些回甘。</p>
+						<p>看看自己，书架上摆满游戏，搜集的动画和电影播放时长超过自己剩余生命，小说堆积如山，模型占据着房间，还有那么多书和漫画⋯⋯</p>
+						<p>这一切一切，都是让我今天依旧充满活力的源泉。</p>
+						<p>每一种爱好，都是支撑我们好好生活的支点。</p>
+						<p>每一种爱好，都奔涌着强大的意志。</p>
+						<p>每一种爱好，都是一个被我们隐藏起来的美好世界。</p>
+						<p>在那些世界里，我们有更鲜活的灵魂雀跃着。</p>
+						<h2>04</h2>
+						<p>1915年，一个叫李叔同的中国人，为一首自己听到的日本歌曲写下中文歌词，他这样写道：</p>
+						<p class="poetry">
+							长亭外，古道边，芳草碧连天。<br>
+							晚风拂柳笛声残，夕阳山外山。<br>
+							天之涯，地之角，知交半零落。<br>
+							一瓢浊酒尽余欢，今宵别梦寒。<br>
+							长亭外，古道边，芳草碧连天。<br>
+							问君此去几时来，来时莫徘徊。<br>
+							天之涯，海之角，知交半零落。<br>
+							人生难得是欢聚，惟有别离多。<br>
+						</p>
+						<p>那之后很多年，我在故乡之外的城市徘徊，耳畔总会响起这首歌，也偶尔会想起离开故乡的克劳德，还有失去爱人的爱丽丝。二十三年光阴如箭，我也唯有用这种方式纪念他们和自己。正如歌中所唱，人生难得是欢聚，惟有别离多。</p>
+						<p>好时光一直在，望君珍惜。<i class="fa fa-circle-o-notch" aria-hidden="true"></i></p>
+					</div>
+
+				</div>
+
+				<div class="com">
+					<h1>留下你的评论</h1>
+					<input type="text" placeholder=" 输入您的昵称" />
+					<input type="email" placeholder=" 输入您的邮箱" /><br>
+					<textarea placeholder=" 分享您的观点,发表您的看法(请文明用语)"></textarea>
+					<div class="but">
+						<button>提交留言</button>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<!-- 底栏 -->
+			<div class="footer">
+				<div class="footc">
+					<div class="logo">极昼·鏡像<br>
+						<span style="font-size: 10px;line-height: 0px;letter-spacing:2px;text-transform:Uppercase;">SHARE YOUR LOVE /
+							Listen to heart</span></div>
+					<p class="f1">
+						「分享你的热爱，聆听心灵之声」是网站宗旨<br>
+						极昼境像致力于分享您所热爱的生活，结识各类志趣相投的同好<br>
+						网站尚在建设，完成进度1%...<br>
+						目前仅作为个人博客前端，未来将会开放注册，敬请期待...<br>
+					</p>
+					<p class="f3">Copyright © 2020 山西大学商务学院. aeolianLee All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				//配置
+				var config = {
+					vx: 3, //小球x轴速度,正为右，负为左
+					vy: 3, //小球y轴速度
+					height: 2, //小球高宽，其实为正方形，所以不宜太大
+					width: 2,
+					count: 200, //点个数
+					color: "5, 119, 233", //点颜色
+					stroke: "16, 156, 237", //线条颜色
+					dist: 6000, //点吸附距离
+					e_dist: 20000, //鼠标吸附加速距离
+					max_conn: 10 //点到点最大连接数
+				}
+
+				//调用
+				CanvasParticle(config);
+			}
+		</script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</body>
+</html>

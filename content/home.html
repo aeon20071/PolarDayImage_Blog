@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>极昼鏡像·主页</title>
+		
+		<link rel="icon" type="image/x-ico" href="../ico/Logo.ico" />
+		
+		<!-- font-awesome 图标包 -->
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+		<!-- 导航栏 -->
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootsnav.css">
+		<link href="../css/topbar.css" rel="stylesheet" />
+		<!-- 轮播图 -->
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css" />
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 天气插件 -->
+		<link rel="stylesheet" href="../css/weather.css">
+		<!-- 通用 -->
+		<link href="../css/normal.css" rel="stylesheet" />
+		<!-- 卡片 -->
+		<link rel="stylesheet" type="text/css" href="../css/card.css">
+		<!-- 翻页 -->
+		<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="../js/kkpager.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/kkpager_orange.css" />
+
+		<style>
+			* {margin: 0;padding: 0;}
+
+			body {
+				font-family: pingFang;
+				width: 100%;
+				height: 3300px;
+				background-color: #f1f1f1;
+				overflow-x: hidden;
+				position: relative;
+			}
+			
+			/* 离线字体 */
+			@font-face {
+				font-family: chineseMao;
+				src: url(../font/chineseMao.ttf) format("truetype");
+			}
+			
+			@font-face {
+				font-family: pingFang;
+				src: url(../font/pingFang) format("truetype");
+			}
+			
+			@font-face {
+				font-family: xingshu;
+				src: url(../font/xingshu.ttf) format("truetype");
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- 背景div -->
+		<div id="mydiv" style="height:3300px;z-index: -99;">
+			<!-- 顶栏 -->
+			<div class="topbarout">
+				<div class="topbar">
+					<h1>
+						<i class="fa fa-circle-o-notch fa-spin fa-fw" style="position: relative;top:-10px;left:117.6px;font-size: 0.6em;color: #0175e8;padding: 0px;font-weight: bolder;"></i>
+						极昼 鏡像
+					</h1>
+
+					<div class="menu">
+							<div class="jq22-container">
+								<div class="demo" style="padding: 2em 0;">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<nav class="navbar navbar-default navbar-mobile bootsnav">
+													<div class="navbar-header">
+														<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+															<i class="fa fa-bars"></i>
+														</button>
+													</div>
+													<div class="collapse navbar-collapse" id="navbar-menu">
+														<ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+															<li><a href="home.html">Home</a></li>
+															<li class="dropdown">
+																<a href="essay.html" class="dropdown-toggle" data-toggle="dropdown">Artist</a>
+																<ul class="dropdown-menu">
+																	<li><a href="essay.html">文章 Essay</a></li>
+																	<li><a href="photo.html">摄影 Photo</a></li>
+																	<li><a href="draw.html">绘画 Draw</a></li>
+																	<li><a href="podcast.html">播客 Podcast</a></li>
+																</ul>
+															</li>
+															<li class="dropdown">
+																<a href="developer.html" class="dropdown-toggle" data-toggle="dropdown">Developer</a>
+																<ul class="dropdown-menu">
+																	<li><a href="404.html">算法与数据结构</a></li>
+																	<li><a href="404.html">搭建网站</a></li>
+																	<li><a href="404.html">数据库</a></li>
+																	<li><a href="404.html">信息系统项目开发</a></li>
+																	<li><a href="404.html">机器学习</a></li>
+																</ul>
+															</li>
+															<li><a href="gamer.html">Gamer</a></li>
+															<li class="dropdown">
+																<a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+																<ul class="dropdown-menu">
+																	<li><a href="../index.html">欢迎页 Welcome</a></li>
+																	<li><a href="404.html">错误页 Error 404</a></li>
+																</ul>
+															</li>
+															<li><a href="about.html">About Me</a></li>
+														</ul>
+													</div>
+												</nav>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+							<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+							<script type="text/javascript" src="../js/bootsnav.js"></script>
+						</div>
+					</div>
+
+				<!-- 头像 -->
+				<div class="headimg"><img src="../images/Headimg.png" width="57px" height="57px"></div>
+			</div>
+
+			<div class="l-chevron">
+				<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+			</div>
+
+			<div class="r-chevron">
+				<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+			</div>
+
+			<!-- 内容 -->
+			<div class="content">
+				<!-- 轮播图 -->
+				<div class="photocarousel">
+					<div class="swiper-container" id="case5">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../images/t1.png" data-swiper-parallax-scale="1.15"></div>
+							<div class="swiper-slide"><img src="../images/t2.png" data-swiper-parallax-scale="1.15"></div>
+							<div class="swiper-slide"><img src="../images/t3.png" data-swiper-parallax-scale="1.15"></div>
+							<div class="swiper-slide"><img src="../images/t4.png" data-swiper-parallax-scale="1.15"></div>
+							<div class="swiper-slide"><img src="../images/t5.png" data-swiper-parallax-scale="1.15"></div>
+							<div class="swiper-slide"><img src="../images/t6.png" data-swiper-parallax-scale="1.15"></div>
+						</div>
+						<!-- 导航按钮 上一页下一页 -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<!-- 分页器 -->
+						<div class="swiper-pagination"></div>
+						<!-- 滚动条 -->
+						<div class="swiper-scrollbar"></div>
+					</div>
+					<script type="text/javascript">
+						/*渐变轮播 */
+						var mySwiper = new Swiper('#case5', {
+							loop: true, //允许从第一张到最后一张，或者从最后一张到第一张  循环属性
+							parallax: true, //视差位移动画
+							effect: 'fade', //轮播效果，fade渐变
+							autoplay: true, //可选选项，自动滑动
+							initialSlide: 1, //默认显示第二张图片索引从0开始
+							speed: 5000, //设置过度时间
+							/* grabCursor: true,//鼠标样式根据浏览器不同而定 */
+							autoplay: {
+								delay: 3000,
+								disableOnInteraction: false,
+							},
+							/*  设置每隔3000毫秒切换 */
+							<!-- 分页器 -->
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+								/* 可点击切换 */
+								dynamicBullets: true,
+								/* 动力球样式 */
+							},
+							<!-- 导航按钮 上一页下一页 -->
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+							<!-- 滚动条 -->
+							scrollbar: {
+								el: '.swiper-scrollbar',
+								hide: true,
+							},
+
+						});
+					</script>
+				</div>
+
+				<div class="top3" style="font-family: pingFang;">
+					<div class="small2" style="margin-left: 0;">
+						<img src="../images/small1.png" width="140px" height="150px" />
+						<div class="s2word">
+							<a href="#">嗨，你也觉得孤独吗？</a>
+							<p>我还要一个人走很长的路，风来自很远的地方，去去也无妨。</p>
+							<h5>BY-<label style="color: #109ced;">warmblood</label>
+								<label class="s2la" style="font-size: 0.9em;color: #5e5e5e;"><i class="fa fa-eye" aria-hidden="true"></i> 32</label></h5>
+						</div>
+					</div>
+					<div class="small2">
+						<img src="../images/small2.png" width="140px" height="150px" />
+						<div class="s2word">
+							<a href="#">好好赚钱吧，人生真的很贵</a>
+							<p>该努力的年纪里，不要选择安逸，该拼搏的岁月里，不要沉迷虚妄。</p>
+							<h5>BY-<label style="color: #109ced;">小茶夜读</label>
+								<label class="s2la" style="font-size: 0.9em;color: #5e5e5e;"><i class="fa fa-eye" aria-hidden="true"></i> 51</label></h5>
+						</div>
+					</div>
+					<div class="small2" style="margin-right: 0;">
+						<img src="../images/small3.png" width="140px" height="150px" />
+						<div class="s2word">
+							<a href="#">这世上，真的没有感同身受</a>
+							<p>正是不在意他人的眼光和看法，我们才有了自己的梦想与远方。</p>
+							<h5>BY-<label style="color: #109ced;">小北</label>
+								<label class="s2la" style="font-size: 0.9em;color: #5e5e5e;"><i class="fa fa-eye" aria-hidden="true"></i> 20</label></h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="incontent">
+					<div class="leftc">
+						<div class="essaycard">
+							<img src="../images/test1.png" width="790px" height="360px">
+							<i class="fa fa-camera" aria-hidden="true"></i>
+
+							<a href="#" class="lab"><i class="fa fa-tag" aria-hidden="true"></i> 摄影 · Photo</a>
+							<a href="#">
+								<h1>旅游拍照千篇一律？这样拍才万里挑一！</h1>
+							</a>
+							<p class="zw">
+								外出旅游肯定少不了拍照，能够用手中的镜头记录下美妙的瞬间，是所有人的共同心声。
+								如何在旅游中拍出有自我风格的照片，而不是随意来几张千篇一律的网红机位打卡照呢？今天我们就以美丽梦幻的云南理想邦为例，看看如何在网红旅游地拍出不一样的游客照吧！
+								<a href="#">More...</a>
+							</p>
+							<p class="low">
+								By- <span style="color: #109ced;font-size: 16px;"> 陆连宇</span>
+								&nbsp;&nbsp;
+								<i class="fa fa-calendar" aria-hidden="true"></i> 3 December'20
+								<span>
+									<i class="fa fa-heart" aria-hidden="true"></i> 55&nbsp;
+									<i class="fa fa-comments-o" aria-hidden="true"></i> 12&nbsp;
+									<i class="fa fa-external-link" aria-hidden="true"></i> 31
+								</span>
+							</p>
+						</div>
+
+						<div class="essaycard">
+							<img src="../images/test3.png" width="790px" height="360px">
+							<i class="fa fa-podcast" aria-hidden="true"></i>
+
+							<a href="#" class="lab"><i class="fa fa-tag" aria-hidden="true"></i> 播客 · Podcast</a>
+							<a href="#">
+								<h1>人与人走的太近，是场灾难</h1>
+							</a>
+							<p class="zw">
+								小时候总期待穿一条裤子的友情，憧憬毫无保留的爱情，以为那才是亲密的表现。
+								长大后现实却告诉我，人跟人走的太近，是一场灾难。成年人的世界里，“亲密无间”少，更多的，反倒是“距离产生美”。
+								相处是门学问，远了生分，近了纠缠，就算是关系再好的两个人，若是没了界限和分寸，最终都将走向陌路。
+								<a href="#">More...</a>
+							</p>
+							<p class="low">
+								By- <span style="color: #109ced;font-size: 16px;"> 茶茶</span>
+								&nbsp;&nbsp;
+								<i class="fa fa-calendar" aria-hidden="true"></i> 1 December'20
+								<span>
+									<i class="fa fa-heart" aria-hidden="true"></i> 62&nbsp;
+									<i class="fa fa-comments-o" aria-hidden="true"></i> 17&nbsp;
+									<i class="fa fa-external-link" aria-hidden="true"></i> 16
+								</span>
+							</p>
+						</div>
+
+						<div class="essaycard">
+							<img src="../images/test2.png" width="790px" height="360px">
+							<i class="fa fa-gamepad" aria-hidden="true"></i>
+
+							<a href="#" class="lab"><i class="fa fa-tag" aria-hidden="true"></i> 玩家 · Gamer</a>
+							<a href="gamer-1.html">
+								<h1>FINAL FANTASY VII：有生之年</h1>
+							</a>
+							<p class="zw">
+								这世间的久别重逢，听得多，见的少。见了还能刻骨铭心的更少。
+								那之后很多年，我在故乡之外的城市徘徊，耳畔总会响起这首歌，也偶尔会想起离开故乡的克劳德，还有失去爱人的爱丽丝。
+								二十三年光阴如箭，我也唯有用这种方式纪念他们和自己。正如歌中所唱，人生难得是欢聚，惟有别离多。
+								<a href="#">More...</a>
+							</p>
+							<p class="low">
+								By- <span style="color: #109ced;font-size: 16px;"> 周行文</span>
+								&nbsp;&nbsp;
+								<i class="fa fa-calendar" aria-hidden="true"></i> 2 November'20
+								<span>
+									<i class="fa fa-heart" aria-hidden="true"></i> 197&nbsp;
+									<i class="fa fa-comments-o" aria-hidden="true"></i> 69&nbsp;
+									<i class="fa fa-external-link" aria-hidden="true"></i> 196
+								</span>
+							</p>
+						</div>
+
+						<div style="width:790px;margin:-20px auto;background-color: white;height: 50px;">
+							<div id="kkpager" style="position: relative;top: 6px;"></div>
+						</div>
+						<script type="text/javascript">
+							function getParameter(name) {
+								var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+								var r = window.location.search.substr(1).match(reg);
+								if (r != null) return unescape(r[2]);
+								return null;
+							}
+
+							//init
+							$(function() {
+								var totalPage = 10;
+								var totalRecords = 390;
+								var pageNo = getParameter('pno');
+								if (!pageNo) {
+									pageNo = 1;
+								}
+								kkpager.generPageHtml({
+									pno: pageNo,
+									//总页码
+									total: totalPage,
+									//总数据条数
+									totalRecords: totalRecords,
+									mode: 'click', //默认值是link，可选link或者click
+									click: function(n) {
+										this.selectPage(n);
+
+										if (n == 1) {
+											//原本是实现无刷新跳转，我这是根据自己需求做的有刷新时跳转
+											//第一页写逻辑跳转
+											// 如：window.location.href=......;
+										} else {
+											//除了第一页写逻辑跳转
+										}
+										return false;
+									}
+								});
+							});
+						</script>
+					</div>
+
+					<div class="rightc">
+						<!-- 天气插件 -->
+						<div class="tianqi">
+							<div class="container">
+								<svg id="back">
+									<radialGradient id="SVGID_1_" cx="0" cy="0" r="320.8304" gradientUnits="userSpaceOnUse">
+										<stop offset="0" style="stop-color:#FFDE17;stop-opacity:0.7" />
+										<stop offset="1" style="stop-color:#FFF200;stop-opacity:0" />
+									</radialGradient>
+									<path id="sunburst" style="fill:url(#SVGID_1_);" d="M0,319.7c-18.6,0-37.3-1.6-55.5-4.8L-7.8,41.4c5.1,0.9,10.6,0.9,15.7,0L56,314.8C37.6,318,18.8,319.7,0,319.7z
+						 M-160.8,276.6c-32.5-18.8-61.3-42.9-85.5-71.6L-34,26.2c3.4,4.1,7.4,7.4,12,10.1L-160.8,276.6z M161.3,276.4L22.1,36.2
+						c4.5-2.6,8.6-6,12-10.1l212.6,178.5C222.5,233.4,193.8,257.6,161.3,276.4z M-302.5,108.3C-315.4,73-321.9,36-322-1.8l277.6-0.5
+						c0,5.3,0.9,10.4,2.7,15.2L-302.5,108.3z M302.6,107.8L41.8,12.8c1.7-4.7,2.6-9.7,2.6-14.9c0-0.3,0-0.6,0-1H322l0-1.3l0,1.9
+						C322,35.4,315.5,72.5,302.6,107.8z M-41.8-17.5l-261-94.5c12.8-35.4,31.6-68,55.8-96.9L-34.1-30.8C-37.5-26.8-40.1-22.3-41.8-17.5z
+						 M41.7-17.7c-1.8-4.8-4.4-9.3-7.8-13.3l212-179.2c24.3,28.8,43.3,61.3,56.3,96.6L41.7-17.7z M-22.2-40.8l-139.6-240
+						c32.7-19,68.1-32,105.2-38.6L-8-46.1C-13-45.2-17.8-43.4-22.2-40.8z M22-40.9c-4.4-2.6-9.2-4.3-14.2-5.1l47.1-273.6
+						c37.2,6.4,72.7,19.2,105.4,38L22-40.9z" />
+								</svg>
+								<nav>
+									<ul>
+										<li><a id="button-snow" class="active"><i class="wi wi-snow"></i></a></li>
+										<li><a id="button-wind"><i class="wi wi-strong-wind"></i></a></li>
+										<li><a id="button-rain"><i class="wi wi-rain"></i></a></li>
+										<li><a id="button-thunder"><i class="wi wi-lightning"></i></a></li>
+										<li><a id="button-sun"><i class="wi wi-day-sunny"></i></a></li>
+									</ul>
+								</nav>
+								<div id="card" class="weather">
+									<svg id="inner">
+										<defs>
+											<path id="leaf" d="M41.9,56.3l0.1-2.5c0,0,4.6-1.2,5.6-2.2c1-1,3.6-13,12-15.6c9.7-3.1,19.9-2,26.1-2.1c2.7,0-10,23.9-20.5,25 c-7.5,0.8-17.2-5.1-17.2-5.1L41.9,56.3z" />
+										</defs>
+										<circle id="sun" style="fill: #F7ED47" cx="0" cy="0" r="50" />
+										<g id="layer3"></g>
+										<g id="cloud3" class="cloud"></g>
+										<g id="layer2"></g>
+										<g id="cloud2" class="cloud"></g>
+										<g id="layer1"></g>
+										<g id="cloud1" class="cloud"></g>
+									</svg>
+									<div class="details">
+										<div class="temp">-2<span>c</span></div>
+										<div class="right">
+											<div id="date" style="font-family: pingFang;">12月2日 周三</div>
+											<div id="summary"></div>
+										</div>
+
+									</div>
+								</div>
+								<svg id="outer"></svg>
+							</div>
+							<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+							<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+							<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js'></script>
+
+							<script src="../js/tianqi.js"></script>
+						</div>
+						<!-- 小名片 -->
+						<div class="xiaomp">
+							<div class="puremingpian">
+								<h2>这里是Lee的个人博客</h2>
+								<img src="../images/中头像.png" />
+								<h3><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> Aeolian Lee</h3>
+								<h4>设计者&白日梦想家</h4>
+								<p>一名有美术功底的软件专业大三学生<br>热衷于研究一切令我好奇的事情<br>精力有限，但想做的事情很多</p>
+							</div>
+							<!-- 关注卡片 -->
+							<div class="followme">
+								<h2>通过以下方式联系我</h2>
+								<table cellpadding="0" cellspacing="0">
+									<tr>
+										<td style="background-image: linear-gradient(125deg,#304e8c,#6286d2);">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+											<p>aeolianLee</p>
+										</td>
+										<td style="background-image: linear-gradient(125deg,#B24592,#F15F79);">
+											<i class="fa fa-instagram" aria-hidden="true"></i>
+											<p>Aeolian</p>
+										</td>
+										<td style="background-image: linear-gradient(125deg,#02b110,#11d41e);">
+											<i class="fa fa-weixin" aria-hidden="true"></i>
+											<p>aeo2200</p>
+										</td>
+									</tr>
+									<tr>
+										<td style="background-image: linear-gradient(125deg,#f40c09,#ff9f00);">
+											<i class="fa fa-weibo" aria-hidden="true"></i>
+											<p>Aeolian</p>
+										</td>
+										<td style="background-image: linear-gradient(125deg,#0a1b42,#137eaf);">
+											<i class="fa fa-steam" aria-hidden="true"></i>
+											<p>Aeolian_X</p>
+										</td>
+										<td style="background-image: linear-gradient(125deg,#FF4B2B,#FF416C);">
+											<i class="fa fa-apple" aria-hidden="true"></i>
+											<p>Aeolian</p>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="top-essay">
+								<h2>十一月内容精选</h2>
+								<ul>
+									<li>
+										<a href="#">每个人的微信里，都藏着一个舍不得删掉的人</a>
+										<p><span>播客·Podcast</span>蕊希</p>
+									</li>
+									<li>
+										<a href="#">2020最后一个月，一切都会好起来的</a>
+										<p><span>播客·Podcast</span>闪闪</p>
+									</li>
+									<li>
+										<a href="#">白色巨兽降临，PlayStation 5开箱与初体验</a>
+										<p><span>玩家·Gamer</span>肖尔</p>
+									</li>
+									<li>
+										<a href="#">70岁的张艺谋，和他的一封情书</a>
+										<p><span>文章·Essay</span>东云</p>
+									</li>
+									<li>
+										<a href="#">愿你不争不抢，却有岁月打赏</a>
+										<p><span>文章·Essay</span>莓丝</p>
+									</li>
+									<li>
+										<a href="#">我挺怀念那个2008年的人人网</a>
+										<p><span>文章·Essay</span>阿拉斯加猫</p>
+									</li>
+									<li>
+										<a href="#">为什么年轻人越来越反感「亲戚」这群人？</a>
+										<p><span>文章·Essay</span>李森达</p>
+									</li>
+									<li>
+										<a href="#">iPhone12 圆滑当道时代的锐利异类</a>
+										<p><span>文章·Essay</span>Bin.</p>
+									</li>
+									<li>
+										<a href="#">《死亡搁浅》和梦想成真的故事们</a>
+										<p><span>玩家·Gamer</span>机核</p>
+									</li>
+									<li>
+										<a href="#">《十三机兵防卫圈》：爱与幻想的虔诚赞歌</a>
+										<p><span>玩家·Gamer</span>Ethan.Blazko</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 底栏 -->
+			<div class="footer">
+				<div class="footc">
+					<div class="logo">极昼·鏡像<br>
+						<span style="font-size: 10px;line-height: 0px;letter-spacing:2px;text-transform:Uppercase;">SHARE YOUR LOVE /
+							Listen to heart</span></div>
+					<p class="f1">
+						「分享你的热爱，聆听心灵之声」是网站宗旨<br>
+						极昼境像致力于分享您所热爱的生活，结识各类志趣相投的同好<br>
+						网站尚在建设，完成进度1%...<br>
+						目前仅作为个人博客前端，未来将会开放注册，敬请期待...<br>
+					</p>
+					<p class="f3">Copyright © 2020 山西大学商务学院. aeolianLee All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				//配置
+				var config = {
+					vx: 3, //小球x轴速度,正为右，负为左
+					vy: 3, //小球y轴速度
+					height: 2, //小球高宽，其实为正方形，所以不宜太大
+					width: 2,
+					count: 200, //点个数
+					color: "5, 119, 233", //点颜色
+					stroke: "16, 156, 237", //线条颜色
+					dist: 6000, //点吸附距离
+					e_dist: 20000, //鼠标吸附加速距离
+					max_conn: 10 //点到点最大连接数
+				}
+
+				//调用
+				CanvasParticle(config);
+			}
+		</script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</body>
+</html>

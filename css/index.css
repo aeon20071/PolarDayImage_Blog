@@ -1,0 +1,115 @@
+*{margin: 0;padding: 0;}
+	body{
+		width:100%;
+		min-width:1000px;
+		overflow:hidden;
+		height: 600px;
+		font-family: pingFang;
+	}
+	.search-box {
+		/*定位，水平垂直居中*/
+		position: absolute;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: rgba(240, 248, 255, 0.8);
+		height: 30px;
+		/*展开前为圆形，展开后为两侧圆角矩形*/
+		border-radius: 40px;
+		padding: 10px;
+	}
+	/*搜索图标样式*/
+	.search-btn {
+		color: #e8a9a4;
+		float: right;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: aliceblue;
+		/*搜索图标居中*/
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/*鼠标移动于搜索框上，搜索图标颜色变化时间*/
+		transition: 0.4s;
+		text-decoration: none;
+	}
+	/*搜索内容样式*/
+	.search-txt {
+		border: none;
+		background: none;
+		outline: none;
+		float: left;
+		padding: 0;
+		color: black;
+		font-family: pingFang;
+		font-size: 16px;
+		font-weight: 400;
+		/*搜索框展开时间*/
+		transition: 0.4s;
+		line-height: 30px;
+		width: 0;
+	}
+	.search-box:hover .search-txt {
+		width: 85px;
+		padding: 0 6px;
+	}
+	.search-box:hover .search-btn {
+		color: aliceblue;
+		background-image: linear-gradient(125deg,#0391ff,#1ab6ff);
+	}
+	.title{
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: chineseMao;
+		text-align: center;
+	}
+	.title h1{
+		padding: 40px;
+		font-size: 45px;
+		font-weight: 100;
+	}
+	.title h3{
+		color: #2e2e2e;
+		font-size: 25px;
+	}
+	.title h3 span{
+		background-color: #c92e2e;
+		padding: 2px 4px;
+		color: whitesmoke;
+		font-weight: 300;
+		font-size: 0.8em;
+		border-radius: 5px;
+	}
+	.title button{
+		display: inline;
+	}
+	.colorname{
+		line-height: 140px;
+		position: absolute;
+		top: -1%;
+		right: 0.5%;
+		font-family: chineseMao;
+		font-size: 950%;
+		color: rgba(255, 168, 160, 0.7);
+	}
+	.copyright{
+		color: #A9A9A9;
+		font-size: 10px;
+		font-weight: 600;
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		transform: translate(-45%, -50%);
+	}
+	canvas {
+		padding:0;
+		margin:0;
+	}
+	div.btnbg {
+		position:fixed;
+		left:0;
+		top:0;
+	}

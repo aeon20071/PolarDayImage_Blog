@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>极昼鏡像·Draw</title>
+
+		<link rel="icon" type="image/x-ico" href="../ico/Logo.ico" />
+
+		<link rel="stylesheet" href="../css/photo.css">
+
+		<!-- font-awesome 图标包 -->
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+		<!-- 导航栏 -->
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootsnav.css">
+		<link href="../css/topbar.css" rel="stylesheet" />
+		<!-- 通用 -->
+		<link href="../css/normal.css" rel="stylesheet" />
+		<!-- 卡片 -->
+		<link rel="stylesheet" type="text/css" href="../css/card.css">
+
+		<link rel="stylesheet" type="text/css" href="../css/search-box.css">
+
+		<style>
+			* {margin: 0;padding: 0;}
+
+			body {
+				font-family: pingFang;
+				width: 100%;
+				height: 3000px;
+				background-color: #f1f1f1;
+				overflow-x: hidden;
+				position: relative;
+			}
+			
+			/* 离线字体 */
+			@font-face {
+				font-family: chineseMao;
+				src: url(../font/chineseMao.ttf) format("truetype");
+			}
+			
+			@font-face {
+				font-family: pingFang;
+				src: url(../font/pingFang) format("truetype");
+			}
+			
+			@font-face {
+				font-family: xingshu;
+				src: url(../font/xingshu.ttf) format("truetype");
+			}
+			.incontent{
+				position: absolute;
+				top:675px;
+				box-shadow: 0px 0px 10px #dedede;
+				border-radius: 8px;
+				background-color: white;
+				height: 1850px;
+				transition: 0.4s;
+			}
+			.incontent:hover{
+				box-shadow: 0px 0px 5px #007AFF;
+			}
+			.photo-content{
+				position: relative;
+				top:-25px;
+				left: -15px;
+				transition: 0.4s;
+			}
+			.search-in:hover+.photo-content{
+				filter: blur(20px);
+			}
+			
+			
+			
+		</style>
+
+	</head>
+
+
+	<body>
+		<!-- 背景div -->
+		<div id="mydiv" style="height:3000px;z-index: -99;">
+			<!-- 顶栏 -->
+			<div class="topbarout">
+				<div class="topbar">
+					<h1>
+						<i class="fa fa-circle-o-notch fa-spin fa-fw" style="position: relative;top:-10px;left:117.6px;font-size: 0.6em;color: #0175e8;padding: 0px;font-weight: bolder;"></i>
+						极昼 鏡像
+					</h1>
+
+					<div class="menu">
+						<div class="jq22-container">
+							<div class="demo" style="padding: 2em 0;">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12">
+											<nav class="navbar navbar-default navbar-mobile bootsnav">
+												<div class="navbar-header">
+													<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+														<i class="fa fa-bars"></i>
+													</button>
+												</div>
+												<div class="collapse navbar-collapse" id="navbar-menu">
+													<ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+														<li><a href="home.html">Home</a></li>
+														<li class="dropdown">
+															<a href="essay.html" class="dropdown-toggle" data-toggle="dropdown">Artist</a>
+															<ul class="dropdown-menu">
+																<li><a href="essay.html">文章 Essay</a></li>
+																<li><a href="photo.html">摄影 Photo</a></li>
+																<li><a href="draw.html">绘画 Draw</a></li>
+																<li><a href="podcast.html">播客 Podcast</a></li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a href="developer.html" class="dropdown-toggle" data-toggle="dropdown">Developer</a>
+															<ul class="dropdown-menu">
+																<li><a href="404.html">算法与数据结构</a></li>
+																<li><a href="404.html">搭建网站</a></li>
+																<li><a href="404.html">数据库</a></li>
+																<li><a href="404.html">信息系统项目开发</a></li>
+																<li><a href="404.html">机器学习</a></li>
+															</ul>
+														</li>
+														<li><a href="gamer.html">Gamer</a></li>
+														<li class="dropdown">
+															<a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+															<ul class="dropdown-menu">
+																<li><a href="../index.html">欢迎页 Welcome</a></li>
+																<li><a href="404.html">错误页 Error 404</a></li>
+															</ul>
+														</li>
+														<li><a href="about.html">About Me</a></li>
+													</ul>
+												</div>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+						<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+						<script type="text/javascript" src="../js/bootsnav.js"></script>
+					</div>
+				</div>
+				<!-- 头像 -->
+				<div class="headimg"><img src="../images/Headimg.png" width="57px" height="57px"></div>
+			</div>
+
+
+			<!-- 内容 -->
+			<div class="content">
+				<!-- 主图 -->
+				<div class="photocarousel" style="position: relative;top: 10px;">
+					<div class="swiper-container" id="case5">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../images/主图/5.gif"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 当前位置 -->
+				<div class="localbar">
+					<h2>aeolianLee的绘画频道</h2>
+					<p>aeolianLee<span> / Draw</span></p>
+				</div>
+
+				<div class="incontent">
+
+					<div class="search-update">
+						<h1>—————— &nbsp;最近一次更新于 15 December '20&nbsp; ——————</h1>
+					</div>
+
+					<div class="search-in">
+						<div class="search d1">
+							<form>
+								<input type="text" placeholder="搜索从这里开始...">
+								<button type="submit"></button>
+							</form>
+						</div>
+					</div>
+
+					<div class="photo-content">
+						<section class="content">
+							<div class="right">
+								<ul>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/10.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>铅绘·骑士蒂娜</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/1.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>素描·老人</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/6.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>铅绘·地狱恶灵</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/11.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>铅绘·海牛高达</h3>
+											</div>
+											<div>
+												<span>16 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/12.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>原创·女孩</h3>
+											</div>
+											<div>
+												<span>16 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/5.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>铅绘·恶灵骑士</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/4.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>原创·猫娘</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/3.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>原创·随笔</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/2.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>铅绘·赛博朋克</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/7.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>数位·梅西</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/8.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>数位·蜘蛛格温</h3>
+											</div>
+											<div>
+												<span>15 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hd img-box">
+											<img src="../images/draw/9.png" alt="">
+										</div>
+										<div class="td">
+											<div>
+												<h3>数位·彼得帕克</h3>
+											</div>
+											<div>
+												<span>9 December '20</span>
+												<div>
+													<button class="gray-btn" style="background-image: linear-gradient(125deg,#CB356B,#BD3F32);position: relative;top: 0.5px;border: none;"><i
+														 class="fa fa-heart" style="font-size: 1.2em;"></i></button>
+													<button class="white-btn"><i class="fa fa-share-alt" style="font-size: 1.3em;position: relative;top: 2px;"></i></button>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</section>
+						<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+						<script src="../js/photo.js"></script>
+						<script>
+							$(function() {
+								// PicScroll
+								new PicScroll('.img-box', {
+									speedUp: 800,
+									speedDown: 500
+								})
+							});
+						</script>
+					</div>
+
+				</div>
+
+
+			</div>
+			<!-- 底栏 -->
+			<footer class="footer">
+				<div class="footc">
+					<div class="logo">极昼·鏡像<br>
+						<span style="font-size: 10px;line-height: 0px;letter-spacing:2px;text-transform:Uppercase;">SHARE YOUR LOVE /
+							Listen to heart</span></div>
+					<p class="f1">
+						「分享你的热爱，聆听心灵之声」是网站宗旨<br>
+						极昼境像致力于分享您所热爱的生活，结识各类志趣相投的同好<br>
+						网站尚在建设，完成进度1%...<br>
+						目前仅作为个人博客前端，未来将会开放注册，敬请期待...<br>
+					</p>
+					<p class="f3">Copyright © 2020 山西大学商务学院. aeolianLee All Rights Reserved</p>
+				</div>
+			</footer>
+			<script type="text/javascript">
+				window.onload = function() {
+					//配置
+					var config = {
+						vx: 3, //小球x轴速度,正为右，负为左
+						vy: 3, //小球y轴速度
+						height: 2, //小球高宽，其实为正方形，所以不宜太大
+						width: 2,
+						count: 200, //点个数
+						color: "5, 119, 233", //点颜色
+						stroke: "16, 156, 237", //线条颜色
+						dist: 6000, //点吸附距离
+						e_dist: 20000, //鼠标吸附加速距离
+						max_conn: 10 //点到点最大连接数
+					}
+
+					//调用
+					CanvasParticle(config);
+				}
+			</script>
+			<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</body>
+</html>

@@ -1,0 +1,173 @@
+@import "https://fonts.googleapis.com/css?family=Lato:300";
+@import "https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css";
+
+.rightc .container {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	position: relative;
+	border-radius: 8px;
+	background: #ffffff;
+	border: transparent 1px solid;
+	transition: 0.4s;
+	border: #d9d9d9 1px solid;
+}
+
+.rightc .container:hover {
+	box-shadow: 0px 0px 5px #007AFF;
+}
+
+.rightc nav ul {
+	margin: 20px 20px 0 20px;
+	list-style-type: none;
+	padding: 0;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+}
+
+.rightc nav li a {
+	display: block;
+	width: 55px;
+	text-align: center;
+	color: #aaa;
+	cursor: pointer;
+}
+
+.rightc nav li a:hover {
+	color: #444;
+}
+
+.rightc nav li a.active {
+	color: #109ced;
+}
+
+#card {
+	box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	width: 336px;
+	padding: 0;
+	height: 40px;
+	min-height: 200px;
+	margin: 20px;
+	border-radius: 5px;
+	position: relative;
+}
+
+#card .details {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 16px 20px;
+	color: #888;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	-webkit-transition: color 2s ease;
+	transition: color 2s ease;
+}
+
+.thunder #card .details {
+	color: #ddd;
+}
+
+.rightc #card .details .right {
+	text-align: right;
+}
+
+.rightc #card .details #date {
+	margin: 4px 0;
+}
+
+.rightc #card .details #summary {
+	font-weight: 600;
+	font-size: 22px;
+}
+
+.rightc #card .details .temp {
+	font-size: 60px;
+	line-height: 60px;
+}
+
+.rightc #card .details .temp span {
+	font-size: 18px;
+	line-height: 30px;
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+.rightc .weather {
+	background-color: #DAE3FD;
+	-webkit-transition: background-color 2s ease;
+	transition: background-color 2s ease;
+}
+
+.rightc .thunder .weather {
+	background-color: #9FA4AD;
+}
+
+.rightc .rain .weather {
+	background-color: #D8D8D8;
+}
+
+.rightc .sun .weather {
+	background-color: #ccccff;
+}
+
+.rightc .weather #inner {
+	background-color: white;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.rightc .weather .cloud {
+	-webkit-transition: fill 2s ease;
+	transition: fill 2s ease;
+}
+
+.rightc .weather #cloud1 {
+	fill: #efefef;
+}
+
+.rightc .thunder .weather #cloud1 {
+	fill: #9FA4AD;
+}
+
+.rightc .weather #cloud2 {
+	fill: #E6E6E6;
+}
+
+.rightc .thunder .weather #cloud2 {
+	fill: #8B8E98;
+}
+
+.rightc .weather #cloud3 {
+	fill: #D5D5D5;
+}
+
+.rightc .thunder .weather #cloud3 {
+	fill: #7B7988;
+}
+
+.rightc #outer,
+#back {
+	position: fixed;
+	pointer-events: none;
+}

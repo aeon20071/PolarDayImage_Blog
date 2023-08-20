@@ -1,0 +1,40 @@
+.modelTost {
+	display: none;
+	background: rgba(0, 0, 0, .5);
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.modelTostChile {
+	width: 600px;
+	margin-top: 30px;
+	background-color: #fff;
+	padding-bottom: 2.5%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.modelTostChile p {
+	font-size: 24px;
+	padding: 3%;
+}
+
+.modelClose {
+	float: right;
+	cursor: pointer;
+}
+
+.swiper-slide {
+	text-align: center;
+}
+
+.swiper-slide img {
+	width: 85%;
+	text-align: center;
+}

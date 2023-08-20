@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.photo-content li {
+  list-style: none;
+  border-radius: 6px;
+}
+.photo-content .nav {
+  height: 70px;
+  background: #333333;
+  display: flex;
+}
+.photo-content .nav .log {
+  width: 251px;
+  align-self: center;
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 22px;
+  padding-left: 10px;
+}
+.photo-content .nav .nav-item {
+  flex: 1;
+  display: flex;
+  color: #fdfdfd;
+  padding-left: 30px;
+}
+.photo-content .nav .nav-item li {
+  align-self: center;
+  padding: 0 15px;
+  font-size: 14px;
+}
+.photo-content .nav .info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 180px;
+  color: #fdfdfd;
+  padding-right: 30px;
+}
+.photo-content .nav .info li {
+  padding: 0 15px;
+  font-size: 14px;
+}
+.photo-content .des {
+  height: 190px;
+  background: #f2f2f2;
+  overflow: hidden;
+  position: relative;
+}
+.photo-content .des img {
+  position: absolute;
+  width: 100%;
+}
+.photo-content .content {
+  display: flex;
+  padding: 40px 40px 0 40px;
+}
+.photo-content .content .left {
+  width: 210px;
+  height: 600px;
+  border-right: solid 1px #cccccc;
+}
+.photo-content .content .left ul .td {
+  border-bottom: solid 1px #cccccc;
+}
+.photo-content .content .left ul .td li:nth-child(1) input {
+  width: 125px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: solid 1px #cccccc;
+}
+.photo-content .content .left ul .td li {
+  color: #555555;
+  font-size: 16px;
+}
+.photo-content .content .left ul .td li:nth-of-type(n+2) {
+  margin-top: 20px;
+}
+.photo-content .content .left ul .td li:last-child {
+  margin-bottom: 20px;
+}
+.photo-content .content .left ul .td li.active {
+  color: #3ea3ff;
+}
+.photo-content .content .left ul .td li:hover {
+  color: #3ea3ff;
+  cursor: pointer;
+}
+.photo-content .content .left ul .bd {
+  padding-top: 20px;
+}
+.photo-content .content .left ul .bd li {
+  margin-bottom: 10px;
+  color: #555555;
+  font-size: 14px;
+}
+.photo-content .content .left ul .bd li:hover {
+  color: #3ea3ff;
+  cursor: pointer;
+}
+.photo-content .content .right {
+  flex: 1;
+  height: 600px;
+  margin-left: 40px;
+}
+.photo-content .content .right ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.photo-content .content .right ul li {
+  width: 30%;
+  height: 360px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #e5e5e5;
+}
+.photo-content .content .right ul li .hd {
+  flex: 2;
+  background: #e5e5e5;
+  position: relative;
+  overflow: hidden;
+}
+.photo-content .content .right ul li .hd img {
+  width: 100%;
+  position: absolute;
+}
+.photo-content .content .right ul li .td {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+}
+.photo-content .content .right ul li .td > div:nth-child(1) {
+  flex: 1;
+  padding: 18px 0 0 18px;
+  border-top: solid 1px #f4f4f4;
+}
+.photo-content .content .right ul li .td > div:nth-child(1) h3 {
+  font-weight: normal;
+  color: #666666;
+  font-size: 16px;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) {
+  height: 50px;
+  border-top: solid 1px #f4f4f4;
+  display: flex;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > span {
+  flex: 1;
+  line-height: 50px;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #666666;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > div {
+  display: flex;
+  align-items: center;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > div button {
+  height: 28px;
+  width: 60px;
+  outline: none;
+  border: none;
+  margin-right: 15px;
+  font-size: 12px;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > div .gray-btn {
+  background: #333333;
+  color: #fff;
+  border: solid 1px #333333;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > div .gray-btn:hover {
+  background: #000000;
+  border: solid 1px #000000;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > div .white-btn {
+  border: solid 1px #e5e5e5;
+  background: #ffffff;
+}
+.photo-content .content .right ul li .td > div:nth-child(2) > div .white-btn:hover {
+  border: solid 1px #aaaaaa;
+}
+.photo-content .content .right ul > li:hover {
+  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,213 @@
+
+@font-face {
+  font-family: 'GothamRnd-Light';
+  src: url('../font/GothamRnd-Light.otf');
+}
+
+html,
+body {
+    font: 12px "GothamRnd-Light", "微软雅黑";
+    font-family: 'GothamRnd-Light';
+    color: #666;
+    background-color: #272727;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+.musicout .container {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 200px;
+  z-index: 300;
+}
+
+.musicout .music-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0px auto 0;
+}
+
+.musicout .music-box img {
+  width: 100%;
+  border-radius: 50%;
+  transition: all 0.36s ease;
+  display: inline;
+  animation: spin 46s infinite linear;
+  animation-play-state: paused;
+}
+
+.musicout .music-box .mask {
+  width: 200px;
+  height: 270px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.musicout .mplayer {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #ad986d;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.musicout .mplayer i {
+  background-color: #000000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 2px;
+  height: 10px;
+  margin-left: -2px;
+  transition: 0.36s ease;
+}
+
+.musicout .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  line-height: 10px;
+}
+
+.musicout .mplayer i .before {
+  width: 0;
+  height: 0;
+  border-color: transparent transparent transparent #ad986d;
+  display: inline-block;
+  border-width: 4px 6px 4px 6px;
+  border-style: solid;
+  color: #ad986d;
+  margin-left: 2px;
+  border-width: 5px 8px;
+  margin-top: 0px;
+  transition: 0.36s ease;
+}
+
+.musicout .mplayer i .before {
+  border-left-color: #000;
+}
+
+.musicout .mplayer i .after {
+  display: inline-block;
+  width: 4px;
+  height: 10px;
+  opacity: 0;
+  transition: 0.36s ease;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.musicout .loadingSvg circle {
+  r: 14;
+  stroke: rgba(0, 0, 0, 0.7);
+  stroke-dasharray: 87;
+  stroke-dashoffset: 87;
+  cx: 25;
+  cy: 25;
+  stroke-width: 2;
+  fill: none;
+}
+
+.musicout .m-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 326px;
+  height: 326px;
+}
+
+.musicout .m_time span {
+  display: block;
+  text-align: center;
+}
+
+.musicout .m_time .mplayer_curtime {
+  padding-top: 42px;
+  font-size: 10px;
+  color: #e1be78;
+}
+
+.musicout .m_time .m-join {
+  display: none;
+}
+
+.musicout .m_time .mplayer_durtime {
+  color: #ad986d;
+}
+
+.musicout .mplaying img {
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+}
+
+.musicout img {
+  animation: spin 46s infinite linear;
+  -webkit-animation: spin 46s infinite linear;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.musicout .mplaying .mplayer i {
+  margin-top: -9px;
+  background-color: transparent;
+}
+
+.musicout .mplaying .mplayer i .before {
+  opacity: 0;
+}
+
+.musicout .mplaying .mplayer i .after {
+  opacity: 1;
+}
+
+.musicout .mplaying .loadingSvg circle {
+  transition: 2s;
+  stroke-dasharray: 87;
+  stroke-dashoffset: 87;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes svgLoading {
+  0% {
+    stroke-dashoffset: 2;
+  }
+
+  100% {
+    stroke-dashoffset: -39;
+  }
+}

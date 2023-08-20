@@ -1,0 +1,124 @@
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: transparent;
+	/*清除点击默认的高亮效果*/
+	-webkit-box-sizing: border-box;
+	/*以你的border开始计算宽度*/
+}
+
+body,html{
+	font-size: 20px;
+	overflow-x: hidden;
+	
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+body {
+	font-size: 0.6rem;
+	font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial","STHeiTi",sans-serif;
+	/*第二个是手机默认的字体*/
+	color: #000;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button{
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;
+	outline: none;
+}
+
+a,img{
+	-webkit-touch-callout: none;
+	/*禁止长按链接与图片弹出菜单*/
+}
+
+a,input{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	/*去除(安卓,苹果)自带阴影的样式*/
+}
+
+a {
+	text-decoration: none;
+	color: #000;	
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+img{
+	max-width: 100%;
+	border: 0;
+	/*display:block;*/
+	vertical-align:middle; 
+}
+
+p {
+	margin: 0;
+}
+
+i{
+	font-style: normal;
+}
+
+ul,ol {
+	list-style: none;
+	margin-bottom: 0;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+
+input,
+textarea {
+	border: none;
+	resize: none;
+	outline: none;
+	/*清除默认选中框*/
+	/*-webkit-appearance: none;*/
+	/*清除移动设备的样式*/
+}
+
+
+/*清除浮动*/
+
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+/*通用栏*/
+.layout{
+	min-width: 300px;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../image/bc.png) no-repeat;
+	background-size: 100% auto;
+}

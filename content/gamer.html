@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>极昼鏡像·Gamer</title>
+
+		<link rel="icon" type="image/x-ico" href="../ico/Logo.ico" />
+
+		<!-- font-awesome 图标包 -->
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+		<!-- 导航栏 -->
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+		<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootsnav.css">
+		<link href="../css/topbar.css" rel="stylesheet" />
+
+		<!-- 天气插件 -->
+		<link rel="stylesheet" href="../css/weather.css">
+		<!-- 通用 -->
+		<link href="../css/normal.css" rel="stylesheet" />
+		<!-- 卡片 -->
+		<link rel="stylesheet" type="text/css" href="../css/card.css">
+		<!-- 翻页 -->
+		<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="../js/kkpager.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/kkpager_orange.css" />
+		<!-- Podcast -->
+		<link rel="stylesheet" type="text/css" href="../css/music.css">
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="../js/TweenMax.min.js"></script>
+
+		<style>
+			* {margin: 0;padding: 0;}
+
+			body {
+				font-family: pingFang;
+				width: 100%;
+				height: 3300px;
+				background-color: #f1f1f1;
+				overflow-x: hidden;
+				position: relative;
+			}
+			.music-card{
+				transform: scale(0.75);
+				position: fixed;
+				top:89%;
+				right: 17.5%;
+				z-index: 9;
+			}
+			
+			/* 离线字体 */
+			@font-face {
+				font-family: chineseMao;
+				src: url(../font/chineseMao.ttf) format("truetype");
+			}
+			
+			@font-face {
+				font-family: pingFang;
+				src: url(../font/pingFang) format("truetype");
+			}
+			
+			@font-face {
+				font-family: xingshu;
+				src: url(../font/xingshu.ttf) format("truetype");
+			}
+		</style>
+
+	</head>
+
+
+	<body>
+		<!-- 背景div -->
+		<div id="mydiv" style="height:3300px;z-index: -99;">
+			<!-- 顶栏 -->
+			<div class="topbarout">
+				<div class="topbar">
+					<h1>
+						<i class="fa fa-circle-o-notch fa-spin fa-fw" style="position: relative;top:-10px;left:117.6px;font-size: 0.6em;color: #0175e8;padding: 0px;font-weight: bolder;"></i>
+						极昼 鏡像
+					</h1>
+
+					<div class="menu">
+						<div class="jq22-container">
+							<div class="demo" style="padding: 2em 0;">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-12">
+											<nav class="navbar navbar-default navbar-mobile bootsnav">
+												<div class="navbar-header">
+													<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+														<i class="fa fa-bars"></i>
+													</button>
+												</div>
+												<div class="collapse navbar-collapse" id="navbar-menu">
+													<ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+														<li><a href="home.html">Home</a></li>
+														<li class="dropdown">
+															<a href="essay.html" class="dropdown-toggle" data-toggle="dropdown">Artist</a>
+															<ul class="dropdown-menu">
+																<li><a href="essay.html">文章 Essay</a></li>
+																<li><a href="photo.html">摄影 Photo</a></li>
+																<li><a href="draw.html">绘画 Draw</a></li>
+																<li><a href="podcast.html">播客 Podcast</a></li>
+															</ul>
+														</li>
+														<li class="dropdown">
+															<a href="developer.html" class="dropdown-toggle" data-toggle="dropdown">Developer</a>
+															<ul class="dropdown-menu">
+																<li><a href="404.html">算法与数据结构</a></li>
+																<li><a href="404.html">搭建网站</a></li>
+																<li><a href="404.html">数据库</a></li>
+																<li><a href="404.html">信息系统项目开发</a></li>
+																<li><a href="404.html">机器学习</a></li>
+															</ul>
+														</li>
+														<li><a href="gamer.html">Gamer</a></li>
+														<li class="dropdown">
+															<a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+															<ul class="dropdown-menu">
+																<li><a href="../index.html">欢迎页 Welcome</a></li>
+																<li><a href="404.html">错误页 Error 404</a></li>
+															</ul>
+														</li>
+														<li><a href="about.html">About Me</a></li>
+													</ul>
+												</div>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+						<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+						<script type="text/javascript" src="../js/bootsnav.js"></script>
+					</div>
+				</div>
+				<!-- 头像 -->
+				<div class="headimg"><img src="../images/Headimg.png" width="57px" height="57px"></div>
+			</div>
+
+
+			<!-- 内容 -->
+			<div class="content">
+				<!-- 主图 -->
+				<div class="photocarousel" style="position: relative;top: 10px;">
+					<div class="swiper-container" id="case5">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../images/主图/4.gif"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 当前位置 -->
+				<div class="localbar">
+					<h2>aeolianLee的游戏频道</h2>
+					<p>aeolianLee<span> / Gamer</span></p>
+				</div>
+
+				<div class="incontent">
+						<div class="leftc" style="position: relative;top: -40px;">
+							<div class="essaycard">
+								<img src="../images/test2.png" width="790px" height="360px">
+								<i class="fa fa-gamepad" aria-hidden="true"></i>
+							
+								<a href="#" class="lab"><i class="fa fa-tag" aria-hidden="true"></i> 玩家 · Gamer</a>
+								<a href="gamer-1.html">
+									<h1>FINAL FANTASY VII：有生之年</h1>
+								</a>
+								<p class="zw">
+									这世间的久别重逢，听得多，见的少。见了还能刻骨铭心的更少。
+									那之后很多年，我在故乡之外的城市徘徊，耳畔总会响起这首歌，也偶尔会想起离开故乡的克劳德，还有失去爱人的爱丽丝。
+									二十三年光阴如箭，我也唯有用这种方式纪念他们和自己。正如歌中所唱，人生难得是欢聚，惟有别离多。
+									<a href="#">More...</a>
+								</p>
+								<p class="low">
+									By- <span style="color: #109ced;font-size: 16px;"> 周行文</span>
+									&nbsp;&nbsp;
+									<i class="fa fa-calendar" aria-hidden="true"></i> 2 November'20
+									<span>
+										<i class="fa fa-heart" aria-hidden="true"></i> 197&nbsp;
+										<i class="fa fa-comments-o" aria-hidden="true"></i> 69&nbsp;
+										<i class="fa fa-external-link" aria-hidden="true"></i> 196
+									</span>
+								</p>
+							</div>
+				
+							<div class="essaycard">
+								<img src="../images/Podecast/文章图/mgame.png" width="790px" height="360px">
+								<i class="fa fa-gamepad" aria-hidden="true"></i>
+				
+								<a href="#" class="lab" style="color: crimson;"><i class="fa fa-quote-left" aria-hidden="true"></i> 原创 · Original</a>
+								<a href="#">
+									<h1>困在手机游戏里的孩子</h1>
+								</a>
+								<p class="zw">
+									《未成年人保护法》于今年再次做出了最新修订。此次修订的“亮点”之一，
+									是新增了网络保护的相关内容。修正专章共计 17 条，核心是修正技术决定论：
+									即营造和保证未成年上网游戏、上网社交的环境，这不仅是游戏厂商和发行商的责任，
+									更是家长、学校以及全社会的责任。目的只有一个，打造多方参与的同心圆，
+									为未成年人的健康成长保驾护航。
+									<a href="#">More...</a>
+								</p>
+								<p class="low">
+									By- <span style="color: #109ced;font-size: 16px;"> aeolianLee</span>
+									&nbsp;&nbsp;
+									<i class="fa fa-calendar" aria-hidden="true"></i> 11 December'20
+									<span>
+										<i class="fa fa-heart" aria-hidden="true"></i> 62&nbsp;
+										<i class="fa fa-comments-o" aria-hidden="true"></i> 17&nbsp;
+										<i class="fa fa-external-link" aria-hidden="true"></i> 16
+									</span>
+								</p>
+							</div>
+				
+							<div class="essaycard">
+								<img src="../images/Podecast/文章图/game.png" width="790px" height="360px">
+								<i class="fa fa-gamepad" aria-hidden="true"></i>
+				
+								<a href="#" class="lab" style="color: crimson;"><i class="fa fa-quote-left" aria-hidden="true"></i> 原创 · Original</a>
+								<a href="#">
+									<h1>人间40年：那些玩家中的「前浪」与「后浪」</h1>
+								</a>
+								<p class="zw">
+									《后浪》刷屏。原因大概在于面对时代、传承、精神、追求等特别宏大的概念之时，
+									身处其中的我们拥有天经地义的发言权，有着旺盛的表达欲望，也有着自认为与之相配的解构能力。
+									于是我们想要尽可能丰沛的阐述这些大词的概念，想要更为完整解释它们的意义。
+									<a href="#">More...</a>
+								</p>
+								<p class="low">
+									By- <span style="color: #109ced;font-size: 16px;"> aeolianLee</span>
+									&nbsp;&nbsp;
+									<i class="fa fa-calendar" aria-hidden="true"></i> 9 December'20
+									<span>
+										<i class="fa fa-heart" aria-hidden="true"></i> 197&nbsp;
+										<i class="fa fa-comments-o" aria-hidden="true"></i> 69&nbsp;
+										<i class="fa fa-external-link" aria-hidden="true"></i> 196
+									</span>
+								</p>
+							</div>
+				
+							<div style="width:790px;margin:-20px auto;background-color: white;height: 50px;">
+								<div id="kkpager" style="position: relative;top: 6px;"></div>
+							</div>
+							<script type="text/javascript">
+								function getParameter(name) {
+									var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+									var r = window.location.search.substr(1).match(reg);
+									if (r != null) return unescape(r[2]);
+									return null;
+								}
+				
+								//init
+								$(function() {
+									var totalPage = 10;
+									var totalRecords = 390;
+									var pageNo = getParameter('pno');
+									if (!pageNo) {
+										pageNo = 1;
+									}
+									kkpager.generPageHtml({
+										pno: pageNo,
+										//总页码
+										total: totalPage,
+										//总数据条数
+										totalRecords: totalRecords,
+										mode: 'click', //默认值是link，可选link或者click
+										click: function(n) {
+											this.selectPage(n);
+				
+											if (n == 1) {
+												//原本是实现无刷新跳转，我这是根据自己需求做的有刷新时跳转
+												//第一页写逻辑跳转
+												// 如：window.location.href=......;
+											} else {
+												//除了第一页写逻辑跳转
+											}
+											return false;
+										}
+									});
+								});
+							</script>
+						</div>
+				
+						<div class="rightc" style="position: relative;top: -360px;">
+							<!-- 小名片 -->
+							<div class="xiaomp">
+								<div class="puremingpian">
+									<h2>这里是Lee的游戏时光</h2>
+									<img src="../images/中头像.png" />
+									<h3><i class="fa fa-pencil fa-3x fa-fw"></i> Aeolian Lee</h3>
+									<h4>主机玩家&独立游戏制作</h4>
+									<p>资深主机游戏死宅<br>坚信游戏是无可替代的艺术载体<br>希望有生之年可以制作游戏</p>
+								</div>
+								<!-- 关注卡片 -->
+								<div class="followme">
+									<h2>通过以下方式联系我</h2>
+									<table cellpadding="0" cellspacing="0">
+										<tr>
+											<td style="background-image: linear-gradient(125deg,#304e8c,#6286d2);">
+												<i class="fa fa-facebook" aria-hidden="true"></i>
+												<p>aeolianLee</p>
+											</td>
+											<td style="background-image: linear-gradient(125deg,#B24592,#F15F79);">
+												<i class="fa fa-instagram" aria-hidden="true"></i>
+												<p>Aeolian</p>
+											</td>
+											<td style="background-image: linear-gradient(125deg,#02b110,#11d41e);">
+												<i class="fa fa-weixin" aria-hidden="true"></i>
+												<p>aeo2200</p>
+											</td>
+										</tr>
+										<tr>
+											<td style="background-image: linear-gradient(125deg,#f40c09,#ff9f00);">
+												<i class="fa fa-weibo" aria-hidden="true"></i>
+												<p>Aeolian</p>
+											</td>
+											<td style="background-image: linear-gradient(125deg,#0a1b42,#137eaf);">
+												<i class="fa fa-steam" aria-hidden="true"></i>
+												<p>Aeolian_X</p>
+											</td>
+											<td style="background-image: linear-gradient(125deg,#FF4B2B,#FF416C);">
+												<i class="fa fa-apple" aria-hidden="true"></i>
+												<p>Aeolian</p>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div class="top-essay">
+									<h2>频道内容精选</h2>
+									<ul>
+										<li>
+											<a href="#">人间40年：那些玩家中的「前浪」与「后浪」</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">10年后，《心灵杀手》依然魅力不减</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">当你的神背叛了你：主机第一方游戏登陆PC</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">一款游戏的民间汉化过程是怎样的？</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">舍不得用游戏里的消耗品？你可能得了一种病</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">这个冬天有点长：疫情冲击下的全球游戏产业</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">20年前，游戏广告催生下的“喷子文化”</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">关于夜晚的几个游戏和几个话题</a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">我很怀念那些五花八门的「游戏安装界面」 </a>
+											<p><span>游戏·Gamer</span>aeolianLee</p>
+										</li>
+										<li>
+											<a href="#">面对内容泄露，游戏公司都会干些什么？</a>
+											<p><span>文游戏·Gamer</span>aeolianLee</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<!-- 底栏 -->
+			<div class="footer">
+				<div class="footc">
+					<div class="logo">极昼·鏡像<br>
+						<span style="font-size: 10px;line-height: 0px;letter-spacing:2px;text-transform:Uppercase;">SHARE YOUR LOVE /
+							Listen to heart</span></div>
+					<p class="f1">
+						「分享你的热爱，聆听心灵之声」是网站宗旨<br>
+						极昼境像致力于分享您所热爱的生活，结识各类志趣相投的同好<br>
+						网站尚在建设，完成进度1%...<br>
+						目前仅作为个人博客前端，未来将会开放注册，敬请期待...<br>
+					</p>
+					<p class="f3">Copyright © 2020 山西大学商务学院. aeolianLee All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				//配置
+				var config = {
+					vx: 3, //小球x轴速度,正为右，负为左
+					vy: 3, //小球y轴速度
+					height: 2, //小球高宽，其实为正方形，所以不宜太大
+					width: 2,
+					count: 200, //点个数
+					color: "5, 119, 233", //点颜色
+					stroke: "16, 156, 237", //线条颜色
+					dist: 6000, //点吸附距离
+					e_dist: 20000, //鼠标吸附加速距离
+					max_conn: 10 //点到点最大连接数
+				}
+
+				//调用
+				CanvasParticle(config);
+			}
+		</script>
+		<script type="text/javascript" src="../js/canvas-particle.js"></script>
+	</body>
+</html>

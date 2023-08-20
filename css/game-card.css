@@ -1,0 +1,364 @@
+/* 精选内容卡片 */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.top-essay {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	width: 380px;
+	box-shadow: 0px 0px 10px #000c20;
+	border-radius: 8px;
+	margin: 37px 0;
+	border: #d9d9d9 1px solid;
+	height: 750px;
+	transition: 0.4s;
+}
+.top-essay:hover{
+	box-shadow: 0px 0px 5px #dedede;
+}
+
+.top-essay h2 {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border-bottom: #e5e5e5 1px solid;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 60px;
+}
+
+.top-essay li {
+	list-style: none;
+	margin: 20px 22px;
+	transition: 0.4s;
+}
+
+.top-essay li a {
+	text-decoration: none;
+	font-family: pingFang;
+	font-weight: bold;
+	color: #000000;
+	font-size: 16px;
+}
+
+.top-essay li p {
+	margin-top: 5px;
+	font-size: 0;
+	font-size: 14px;
+	font-family: pingFang;
+	font-weight: lighter;
+	color: #109ced;
+}
+
+.top-essay li p span {
+	background-color: #109ced;
+	font-size: 0.8em;
+	padding: 1px 5px;
+	border-radius: 5px;
+	margin-right: 7px;
+	font-family: pingFang;
+	color: whitesmoke;
+}
+
+.top-essay li:hover {
+	font-size: 16px;
+	box-shadow: 0px 0px 10px #dedede;
+	border-radius: 8px;
+	background-color: white;
+	transform: scale(1.2);
+}
+
+
+/* 小名片卡片 */
+.puremingpian {
+	width: 380px;
+	height: 400px;
+	border: #d9d9d9 1px solid;
+	box-shadow: 0px 0px 10px #000c20;
+	border-radius: 8px;
+	text-align: center;
+	background-color: #ffffff;
+	transition: 0.4s;
+}
+
+.puremingpian:hover{
+	box-shadow: 0px 0px 5px #007AFF;
+}
+
+.puremingpian h2 {
+	margin-bottom: 0;
+	border-bottom: #e5e5e5 1px solid;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+
+.puremingpian h3 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.puremingpian h3 i {
+	color: #0074e8;
+	font-size: 21px;
+}
+
+.puremingpian h4 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #5e5e5e;
+}
+
+.puremingpian img {
+	width: 130px;
+	margin-top: 25px;
+	margin-bottom: 16px;
+	border-radius: 50%;
+	border: #e5e5e5 2px solid;
+}
+
+.puremingpian p {
+	line-height: 1.5em;
+	margin: 12px 0;
+	color: #6c6c6c;
+	font-weight: lighter;
+}
+
+
+/* 导航文章小卡片 */
+.small2 {
+	position: relative;
+	width: 380px;
+	height: 150px;
+	box-shadow: 0px 0px 10px #000c20;
+	border-radius: 8px;
+	background-color: #ffffff;
+	float: left;
+	display: inline;
+	margin: 37px 15px;
+	font-family: pingFang;
+	border: transparent 1px solid;
+	transition: 0.4s;
+}
+
+.small2:hover{
+	box-shadow: 0px 0px 5px #007AFF;
+}
+
+.small2:hover {
+	border: #cbcbcb 1px solid;
+}
+
+.small2 img {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	border-radius: 8px 0 0 8px;
+}
+
+.s2word {
+	position: absolute;
+	top: 3px;
+	left: 40%;
+	margin-right: 5px;
+}
+
+.s2word a {
+	text-decoration: none;
+	color: #109ced;
+	line-height: 50px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+.s2word p {
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: 600;
+}
+
+.s2word h5 {
+	color: #5e5e5e;
+	font-size: 15px;
+	line-height: 50px;
+}
+
+.s2word .s2la {
+	position: absolute;
+	left: 77%;
+}
+
+@font-face {
+	font-family: pingFang;
+	src: url(../font/pingFang) format("truetype");
+}
+
+
+/* 文章预览卡片 */
+.essaycard {
+	width: 792px;
+	box-shadow: 0px 0px 10px #000c20;
+	border-radius: 8px;
+	margin-bottom: 40px;
+	border: #d9d9d9 1px solid;
+	position: relative;
+	background-color: #ffffff;
+	transition: 0.4s;
+}
+.essaycard:hover{
+	box-shadow: 0px 0px 5px #007AFF;
+}
+
+.essaycard img {
+	border-radius: 8px 8px 0 0;
+}
+
+.essaycard a {
+	text-decoration: none;
+	color: black;
+}
+
+.essaycard .fa-camera {
+	position: absolute;
+	top: 320px;
+	right: 20px;
+	font-size: 26px;
+	color: #DFDFDF;
+}
+
+.essaycard .fa-podcast {
+	position: absolute;
+	top: 320px;
+	right: 20px;
+	font-size: 28px;
+	color: #DFDFDF;
+}
+
+.essaycard .fa-gamepad {
+	position: absolute;
+	top: 320px;
+	right: 20px;
+	font-size: 30px;
+	color: #DFDFDF;
+}
+
+.essaycard .lab {
+	padding: 0px 20px;
+	color: #109ced;
+	font-size: 12px;
+	line-height: 50px;
+}
+
+.essaycard h1 {
+	font-family: chineseMao;
+	font-size: 36px;
+	margin-bottom: 30px;
+	margin-left: 21px;
+	transition: 0.4s;
+}
+
+.essaycard h1:hover {
+	color: #109ced;
+}
+
+.essaycard .zw {
+	margin: 0px 21px;
+	line-height: 28px;
+	color: #a25e5e;
+	font-weight: lighter;
+}
+
+.essaycard .low {
+	margin-top: 45px;
+	margin-left: 21px;
+	margin-bottom: 25px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.essaycard .zw a {
+	color: #d9d9d9;
+	font-size: 16px;
+}
+
+.essaycard .zw a:hover {
+	color: #109ced;
+}
+
+.essaycard .low span:last-child {
+	position: absolute;
+	bottom: 20px;
+	right: 25px;
+	color: #5e5e5e;
+}
+
+
+/* 关注卡片 */
+.followme {
+	margin: 0;padding: 0;
+	text-align: center;
+	background-color: white;
+	width: 380px;
+	height: 400px;
+	box-shadow: 0px 0px 10px #000c20;
+	border-radius: 8px;
+	margin: 37px 0;
+	border: #d9d9d9 1px solid;
+	transition: 0.4s;
+}
+
+.followme:hover{
+	box-shadow: 0px 0px 5px #007AFF;
+}
+
+.followme h2 {
+	margin: 0;padding: 0;
+	border-bottom: #e5e5e5 1px solid;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 60px;
+}
+
+.followme i {
+	margin: 0;padding: 0;
+	font-size: 38px;
+	color: white;
+}
+
+.followme table {
+	padding: 0;
+	width: 300px;
+	background-color: aqua;
+	margin: 20px 40px;
+}
+
+.followme td {
+	margin: 0;padding: 0;
+	min-width: 100px;
+	height: 140px;
+}
+
+.followme table p {
+	margin: 0;padding: 0;
+	color: transparent;
+	font-size: 0;
+	transition: 0.4s;
+}
+
+.followme table td:hover p {
+	margin: 0;padding: 0;
+	color: #D0D8E6;
+	font-size: 15px;
+	padding-top: 10px;
+	float: unset;
+}
+
+.followme table td:hover {
+	margin: 0;padding: 0;
+	width: 20px;
+}
