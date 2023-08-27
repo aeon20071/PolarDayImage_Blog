@@ -7,6 +7,10 @@
 
 This is a static web blog based on **HTML5**, **CSS**,  **JavaScript**, and the project was completed in 2020. This project is a university assignment for a web front-end design course, which only completes a few basic web pages and functions. The project follows the GPL protocol and can be developed for secondary purposes.
 
+**运行环境**： Chromium 99.0及以上，FireFox 116.0.3及以上，推荐显示分辨率 1920*1080。推荐项目编辑工具为VS Code或HBuilderX。
+
+**Operating environment**: Chromium 99.0 and above, FireFox 116.0.3 and above, recommended display resolution 1920 * 1080. The recommended project editing tool is VS Code or HBuilderX.
+
 
 ## 2. 预览 Preview
 
